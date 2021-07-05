@@ -1,10 +1,701 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Donegal+One&family=Gentium+Book+Basic&family=Lexend+Zetta&family=Milonga&family=Oregano&family=Quando&family=Red+Rose&display=swap");
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-main {
+nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 80px;
+  z-index: 1;
+}
+
+nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+nav span {
+  color: white;
+  font-size: 3em;
+  font-family: "Lexend Zetta", sans-serif;
+  padding-left: 1.5em;
+  color: navy;
+  padding-top: .2em;
+}
+
+nav svg {
+  fill: gray;
+  padding-left: 5em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+nav button {
+  background-color: navy;
+  color: white;
+  font-size: 1em;
+  font-family: "Lexend Zetta", sans-serif;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  padding: 0 .6em 0 .6em;
+  margin-right: 3em;
+  cursor: pointer;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  opacity: .8;
+}
+
+nav button:hover {
+  color: white;
+  background-color: red;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  opacity: 1;
+}
+
+.colorChange-nav {
+  background-color: rgba(41, 41, 114, 0.9);
+}
+
+.colorChange-nav-span {
+  color: white;
+  font-size: 2em;
+  padding-top: .7em;
+}
+
+.hero {
+  background-image: url(bgr1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero h1 {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  letter-spacing: .1em;
+  font-size: 2.5em;
+  font-family: "Lexend Zetta", sans-serif;
+  text-shadow: 2px 2px 2px navy;
+}
+
+.hero h1 span {
+  color: navy;
+  font-size: 1.5em;
+}
+
+.hero-subtext {
+  position: absolute;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6em;
+  letter-spacing: 3px;
+}
+
+.hero-subtext a {
+  text-decoration: none;
+  color: white;
+}
+
+.hero-subtext span {
+  padding: .5em;
+  background-color: navy;
+  border-radius: 15px;
+  opacity: .55;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.hero-subtext span:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+}
+
+.about p:first-child {
+  font-size: 2em;
+  line-height: 0.2em;
+}
+
+.about img {
+  width: 300px;
+  height: 300px;
+}
+
+.about .about-text {
+  color: navy;
+  font-family: "Donegal One", serif;
+  padding: 80px 4em 0 4em;
+  letter-spacing: .1em;
+  line-height: 1.8;
+  font-size: 1em;
+}
+
+.about .about-text span {
+  color: red;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.about img {
+  height: 500px;
+  width: 400px;
+  float: right;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  margin-left: 2em;
+}
+
+.massage-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.massage-title {
+  padding-top: 50px;
+  width: 30%;
+  font-family: "Lexend Zetta", sans-serif;
+  letter-spacing: .3em;
+  width: 50%;
+}
+
+.massage-title .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: none;
+  color: navy;
+  text-align: center;
+  height: 1.5em;
+  font-size: 2em;
+}
+
+.massage-title .hr-text:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(navy), to(transparent));
+  background: linear-gradient(to right, transparent, navy, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0.05em;
+}
+
+.massage-title .hr-text:after {
+  content: 'Masszázs';
+  position: relative;
+  display: inline-block;
+  color: navy;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  background-color: white;
+}
+
+.massage-text {
+  padding: 0 4em 0 4em;
+  color: navy;
+  font-family: "Donegal One", serif;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.card-container {
+  padding: 1em 4em 0 4em;
+}
+
+.massage-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.massage-cards ul li {
+  list-style-type: none;
+  border: 1px yellow solid;
+}
+
+.card {
+  height: 250px;
+  width: 200px;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.4);
+  padding-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  font-family: "Donegal One", serif;
+  line-height: 1.6em;
+  color: navy;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.card::before {
+  content: url(massage.svg);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: .8em;
+}
+
+.card p:nth-child(1) {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: red;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.2em;
+}
+
+.card span:nth-child(2) {
+  font-size: 1.2em;
+}
+
+.card span:nth-child(3) {
+  font-size: 1.1em;
+}
+
+.card span:nth-child(4) {
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.1em;
+  padding-top: .5em;
+}
+
+.card:hover {
+  background-color: red;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.training-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 4em;
+}
+
+.training-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.training-title {
+  padding-top: 50px;
+  width: 30%;
+  font-family: "Lexend Zetta", sans-serif;
+  letter-spacing: .3em;
+  width: 50%;
+}
+
+.training-title .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: none;
+  color: navy;
+  text-align: center;
+  height: 1.5em;
+  font-size: 2em;
+}
+
+.training-title .hr-text:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(navy), to(transparent));
+  background: linear-gradient(to right, transparent, navy, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0.05em;
+}
+
+.training-title .hr-text:after {
+  content: 'Személyi edzés';
+  position: relative;
+  display: inline-block;
+  color: navy;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  background-color: white;
+}
+
+.training-text {
+  color: navy;
+  font-family: "Donegal One", serif;
+  font-size: 1em;
+  line-height: 1.6;
+  width: 80%;
+}
+
+.training-text .negative {
+  list-style-image: url(dislike.svg);
+}
+
+.training-text .positive {
+  list-style-image: url(like.svg);
+}
+
+.card-container.training {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.training-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+}
+
+.training-cards .card {
+  padding-bottom: 0;
+}
+
+.training-cards .card::before {
+  content: url(stretching-exercises.svg);
+  padding: 1em 0 1em 0;
+}
+
+.training-cards span:nth-child(1) {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: red;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.2em;
+  line-height: 1.8em;
+}
+
+.training-cards span:nth-child(2) {
+  font-size: 1.2em;
+  padding-top: .5em;
+}
+
+.training-cards span:nth-child(3) {
+  font-size: 1.1em;
+  padding-top: .5em;
+  text-align: center;
+}
+
+.travel-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.travel-title {
+  padding-top: 50px;
+  width: 30%;
+  font-family: "Lexend Zetta", sans-serif;
+  letter-spacing: .3em;
+  width: 50%;
+}
+
+.travel-title .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: none;
+  color: navy;
+  text-align: center;
+  height: 1.5em;
+  font-size: 2em;
+}
+
+.travel-title .hr-text:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(navy), to(transparent));
+  background: linear-gradient(to right, transparent, navy, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0.05em;
+}
+
+.travel-title .hr-text:after {
+  content: 'Kiszállási díj';
+  position: relative;
+  display: inline-block;
+  color: navy;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  background-color: white;
+}
+
+.travel-text {
+  padding: 0 4em 0 4em;
+  color: navy;
+  font-family: "Donegal One", serif;
+  font-size: 1.2em;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.travel-text span {
+  color: red;
+  font-weight: 600;
+}
+
+.contact-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-title {
+  padding-top: 50px;
+  width: 30%;
+  font-family: "Lexend Zetta", sans-serif;
+  letter-spacing: .3em;
+  width: 50%;
+}
+
+.contact-title .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: none;
+  color: navy;
+  text-align: center;
+  height: 1.5em;
+  font-size: 2em;
+}
+
+.contact-title .hr-text:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(navy), to(transparent));
+  background: linear-gradient(to right, transparent, navy, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0.05em;
+}
+
+.contact-title .hr-text:after {
+  content: 'Kapcsolat';
+  position: relative;
+  display: inline-block;
+  color: navy;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  background-color: white;
+}
+
+.contact-form-container {
+  height: 580px;
+  width: 100%;
+  font-family: "Donegal One", serif;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-form-container span {
+  color: navy;
+  font-family: "Donegal One", serif;
+  font-size: 1.2em;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+#contact-form {
+  line-height: 1.6em;
+  border-radius: 30px;
+  margin-bottom: 2em;
+}
+
+#contact-form label {
+  font-family: "Donegal One", serif;
+  font-size: 1.2em;
+  color: navy;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 85%;
+  margin-bottom: 1.5em;
+  border: none;
+  border-radius: 20px;
+  background: navy;
+  opacity: .4;
+  color: white;
+  font-size: 1.1em;
+  line-height: 3em;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  padding-left: .5em;
+}
+
+#contact-form textarea {
+  resize: none;
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
+#contact-form input[type="submit"] {
+  width: 85%;
+  padding: .4em;
+  border-radius: 20px;
+  border: none;
+  background: navy;
+  opacity: 1;
+  font-size: 1.3em;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  line-height: 1.5em;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+#contact-form input[type="submit"]:hover {
+  opacity: .6;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+#contact-form input[type="submit"]:active {
+  opacity: 1;
+}
+
+@media (min-width: 568px) {
+  form {
+    width: 60%;
+  }
+}
+
+footer {
+  background-color: navy;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Donegal One", serif;
+  padding: .1em 3em .2em 3em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer span {
+  font-size: 2em;
+  font-family: "Lexend Zetta", sans-serif;
+  color: navy;
+  color: white;
+}
+
+/* main {
     padding-left: 1.5em;
 }
 
@@ -41,8 +732,5 @@ th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
-}
-
-footer {
-    background-color: #dddddd;
-}
+} */
+/*# sourceMappingURL=style.css.map */

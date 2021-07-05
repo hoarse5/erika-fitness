@@ -1,0 +1,629 @@
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Donegal+One&family=Gentium+Book+Basic&family=Lexend+Zetta&family=Milonga&family=Oregano&family=Quando&family=Red+Rose&display=swap');
+    $Font2: 'Akaya Telivigala',
+    cursive;
+    $Font4: 'Donegal One',
+    serif;
+    $Font5: 'Gentium Book Basic',
+    serif;
+    $Font6: 'Just Another Hand',
+    cursive;
+    $Font7: 'Lexend Zetta',
+    sans-serif;
+    $Font8: 'Milonga',
+    cursive;
+    $Font10: 'Oregano',
+    cursive;
+    $Font11: 'Quando',
+    serif;
+    $Font12: 'Red Rose',
+    cursive;
+    $primaryColour: navy;
+    $secondaryColour: red;
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    nav {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 80px;
+        z-index: 1;
+        a {
+            display: flex;
+            text-decoration: none;
+        }
+        span {
+            color: white;
+            font-size: 3em;
+            font-family: $Font7;
+            padding-left: 1.5em;
+            color: $primaryColour;
+            padding-top: .2em;
+        }
+        svg {
+            fill: gray;
+            padding-left: 5em;
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
+        button {
+            background-color: $primaryColour;
+            color: white;
+            font-size: 1em;
+            font-family: $Font7;
+            border: none;
+            border-radius: 20px;
+            height: 40px;
+            padding: 0 .6em 0 .6em;
+            margin-right: 3em;
+            cursor: pointer;
+            transition: 1s ease all;
+            opacity: .8;
+            &:hover {
+                color: white;
+                background-color: $secondaryColour;
+                transform: scale(1.1, 1.1);
+                opacity: 1;
+            }
+        }
+    }
+    
+    .colorChange-nav {
+        background-color: rgba(41, 41, 114, 0.9);
+    }
+    
+    .colorChange-nav-span {
+        color: white;
+        font-size: 2em;
+        padding-top: .7em;
+    }
+    
+    .hero {
+        background-image: url(bgr1.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .hero h1 {
+        position: absolute;
+        left: 50%;
+        top: 48%;
+        width: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        transform: translate(-50%, -50%);
+        letter-spacing: .1em;
+        font-size: 2.5em;
+        font-family: $Font7;
+        text-shadow: 2px 2px 2px navy;
+        span {
+            color: $primaryColour;
+            font-size: 1.5em;
+        }
+    }
+    
+    .hero-subtext {
+        position: absolute;
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6em;
+        letter-spacing: 3px;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        span {
+            padding: .5em;
+            background-color: navy;
+            border-radius: 15px;
+            opacity: .55;
+            transition: 1s ease all;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1, 1.1);
+            }
+        }
+    }
+    
+    .about {
+        width: 100%;
+        height: 100vh;
+        p:first-child {
+            font-size: 2em;
+            line-height: 0.2em;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+        }
+        .about-text {
+            color: $primaryColour;
+            font-family: $Font4;
+            padding: 80px 4em 0 4em;
+            letter-spacing: .1em;
+            line-height: 1.8;
+            font-size: 1em;
+            span {
+                color: $secondaryColour;
+                font-weight: 600;
+                font-size: 1.1em;
+            }
+        }
+        img {
+            height: 500px;
+            width: 400px;
+            float: right;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+            border-radius: 5px;
+            margin-left: 2em;
+        }
+    }
+    
+    .massage-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .massage-title {
+        padding-top: 50px;
+        width: 30%;
+        font-family: $Font7;
+        letter-spacing: .3em;
+        width: 50%;
+        .hr-text {
+            line-height: 1em;
+            position: relative;
+            outline: 0;
+            border: none;
+            color: $primaryColour;
+            text-align: center;
+            height: 1.5em;
+            font-size: 2em;
+            &:before {
+                content: '';
+                // use the linear-gradient for the fading effect
+                // use a solid background color for a solid bar
+                background: linear-gradient(to right, transparent, $primaryColour, transparent);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 0.05em;
+            }
+            &:after {
+                content: 'Masszázs';
+                position: relative;
+                display: inline-block;
+                color: $primaryColour;
+                padding: 0 .5em;
+                line-height: 1.5em;
+                // this is really the only tricky part, you need to specify the background color of the container element...
+                background-color: white;
+            }
+        }
+    }
+    
+    .massage-text {
+        padding: 0 4em 0 4em;
+        color: $primaryColour;
+        font-family: $Font4;
+        font-size: 1em;
+        line-height: 1.6;
+    }
+    
+    .card-container {
+        padding: 1em 4em 0 4em;
+    }
+    
+    .massage-cards {
+        display: flex;
+        justify-content: space-between;
+        ul li {
+            list-style-type: none;
+            border: 1px yellow solid;
+        }
+    }
+    
+    .card {
+        height: 250px;
+        width: 200px;
+        box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, .4);
+        padding-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        font-family: $Font4;
+        line-height: 1.6em;
+        color: $primaryColour;
+        transition: 1s ease all;
+        &::before {
+            content: url(massage.svg);
+            align-items: center;
+            padding-top: .8em;
+        }
+        p:nth-child(1) {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: $secondaryColour;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .8);
+            padding: 0.2em;
+        }
+        span:nth-child(2) {
+            font-size: 1.2em;
+        }
+        span:nth-child(3) {
+            font-size: 1.1em;
+        }
+        span:nth-child(4) {
+            font-size: 1em;
+            text-align: center;
+            line-height: 1.1em;
+            padding-top: .5em;
+        }
+        &:hover {
+            background-color: $secondaryColour;
+            transform: scale(1.1, 1.1);
+            color: white;
+            box-shadow: none;
+        }
+    }
+    
+    .training-text-container {
+        display: flex;
+        justify-content: center;
+        padding-left: 4em;
+    }
+    
+    .training-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .training-title {
+        padding-top: 50px;
+        width: 30%;
+        font-family: $Font7;
+        letter-spacing: .3em;
+        width: 50%;
+        .hr-text {
+            line-height: 1em;
+            position: relative;
+            outline: 0;
+            border: none;
+            color: $primaryColour;
+            text-align: center;
+            height: 1.5em;
+            font-size: 2em;
+            &:before {
+                content: '';
+                // use the linear-gradient for the fading effect
+                // use a solid background color for a solid bar
+                background: linear-gradient(to right, transparent, $primaryColour, transparent);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 0.05em;
+            }
+            &:after {
+                content: 'Személyi edzés';
+                position: relative;
+                display: inline-block;
+                color: $primaryColour;
+                padding: 0 .5em;
+                line-height: 1.5em;
+                // this is really the only tricky part, you need to specify the background color of the container element...
+                background-color: white;
+            }
+        }
+    }
+    
+    .training-text {
+        color: $primaryColour;
+        font-family: $Font4;
+        font-size: 1em;
+        line-height: 1.6;
+        width: 80%;
+        .negative {
+            list-style-image: url(dislike.svg);
+        }
+        .positive {
+            list-style-image: url(like.svg);
+        }
+    }
+    
+    .card-container.training {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .training-cards {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        .card {
+            padding-bottom: 0;
+        }
+        .card::before {
+            content: url(stretching-exercises.svg);
+            padding: 1em 0 1em 0;
+        }
+        span:nth-child(1) {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: $secondaryColour;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .8);
+            padding: 0.2em;
+            line-height: 1.8em;
+        }
+        span:nth-child(2) {
+            font-size: 1.2em;
+            padding-top: .5em;
+        }
+        span:nth-child(3) {
+            font-size: 1.1em;
+            padding-top: .5em;
+            text-align: center;
+        }
+    }
+    
+    .travel-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .travel-title {
+        padding-top: 50px;
+        width: 30%;
+        font-family: $Font7;
+        letter-spacing: .3em;
+        width: 50%;
+        .hr-text {
+            line-height: 1em;
+            position: relative;
+            outline: 0;
+            border: none;
+            color: $primaryColour;
+            text-align: center;
+            height: 1.5em;
+            font-size: 2em;
+            &:before {
+                content: '';
+                // use the linear-gradient for the fading effect
+                // use a solid background color for a solid bar
+                background: linear-gradient(to right, transparent, $primaryColour, transparent);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 0.05em;
+            }
+            &:after {
+                content: 'Kiszállási díj';
+                position: relative;
+                display: inline-block;
+                color: $primaryColour;
+                padding: 0 .5em;
+                line-height: 1.5em;
+                // this is really the only tricky part, you need to specify the background color of the container element...
+                background-color: white;
+            }
+        }
+    }
+    
+    .travel-text {
+        padding: 0 4em 0 4em;
+        color: $primaryColour;
+        font-family: $Font4;
+        font-size: 1.2em;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 3em;
+        span {
+            color: $secondaryColour;
+            font-weight: 600;
+        }
+    }
+    
+    .contact-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .contact-title {
+        padding-top: 50px;
+        width: 30%;
+        font-family: $Font7;
+        letter-spacing: .3em;
+        width: 50%;
+        .hr-text {
+            line-height: 1em;
+            position: relative;
+            outline: 0;
+            border: none;
+            color: $primaryColour;
+            text-align: center;
+            height: 1.5em;
+            font-size: 2em;
+            &:before {
+                content: '';
+                // use the linear-gradient for the fading effect
+                // use a solid background color for a solid bar
+                background: linear-gradient(to right, transparent, $primaryColour, transparent);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 0.05em;
+            }
+            &:after {
+                content: 'Kapcsolat';
+                position: relative;
+                display: inline-block;
+                color: $primaryColour;
+                padding: 0 .5em;
+                line-height: 1.5em;
+                // this is really the only tricky part, you need to specify the background color of the container element...
+                background-color: white;
+            }
+        }
+    }
+    
+    .contact-form-container {
+        height: 580px;
+        width: 100%;
+        font-family: $Font4;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        span {
+            color: $primaryColour;
+            font-family: $Font4;
+            font-size: 1.2em;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+    }
+    
+    #contact-form {
+        line-height: 1.6em;
+        border-radius: 30px;
+        margin-bottom: 2em;
+        label {
+            font-family: $Font4;
+            font-size: 1.2em;
+            color: $primaryColour;
+        }
+        input,
+        textarea {
+            width: 85%;
+            margin-bottom: 1.5em;
+            border: none;
+            border-radius: 20px;
+            background: $primaryColour;
+            opacity: .4;
+            color: white;
+            font-size: 1.1em;
+            line-height: 3em;
+            &:focus {
+                outline: none;
+                padding-left: .5em;
+            }
+        }
+        textarea {
+            resize: none;
+            font-size: 1.5em;
+            line-height: 1.3em;
+        }
+        input[type="submit"] {
+            width: 85%;
+            padding: .4em;
+            border-radius: 20px;
+            border: none;
+            background: $primaryColour;
+            opacity: 1;
+            font-size: 1.3em;
+            letter-spacing: .4em;
+            text-transform: uppercase;
+            color: white;
+            cursor: pointer;
+            line-height: 1.5em;
+            transition: 1s ease all;
+            &:hover {
+                opacity: .6;
+                transform: scale(1.1, 1.1);
+            }
+            &:active {
+                opacity: 1;
+            }
+        }
+    }
+    
+    @media (min-width: 568px) {
+        form {
+            width: 60%;
+        }
+    }
+    
+    footer {
+        background-color: $primaryColour;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $Font4;
+        padding: .1em 3em .2em 3em;
+        a {
+            text-decoration: none;
+        }
+        span {
+            font-size: 2em;
+            font-family: $Font7;
+            color: $primaryColour;
+            color: white;
+        }
+    }
+    /* main {
+    padding-left: 1.5em;
+}
+
+h1 {
+    text-align: center;
+}
+
+.first-section {
+    margin-bottom: 2em;
+}
+
+.about img {
+    padding-right: 1em;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    float: left;
+    border-radius: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+} */
