@@ -695,6 +695,11 @@ footer span {
   color: white;
 }
 
+footer #v2 {
+  color: white;
+  font-weight: 600;
+}
+
 /* main {
     padding-left: 1.5em;
 }

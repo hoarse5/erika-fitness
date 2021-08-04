@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.logo img {
+    width: 50px;
+    border-radius: 12% 88% 14% 86% / 17% 75% 25% 83%;
+    padding: 0 0 0 .7em;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    z-index: 1;
+    background-color: teal;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    padding: .8em;
+    color: indigo;
+}
+
+nav li:hover {
+    color: red;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav span {
+    color: indigo;
+    font-size: 2.6em;
+    font-weight: 600;
+    padding: .4em 0 .4em .7em;
+    cursor: pointer;
+}
+
+main {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+}
+
+.contact {
+    background-color: red;
+    width: 80%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: teal;
+    color: white;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer span {
+    font-size: 2em;
+    padding-left: .7em;
+}
+
+#v3,
+#v1 {
+    font-weight: 600;
+    padding-right: .7em;
+}
