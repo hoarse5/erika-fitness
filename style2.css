@@ -38,7 +38,7 @@ nav li {
     color: indigo;
     font-size: 1.5em;
     font-weight: 600;
-    transition-duration: .5s;
+    transition-delay: .25s;
 }
 
 nav a:last-child li {
@@ -47,7 +47,6 @@ nav a:last-child li {
 
 nav li:hover {
     color: hotpink;
-    transform: scale(1.05);
 }
 
 nav a {
