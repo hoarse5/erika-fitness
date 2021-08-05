@@ -41,9 +41,13 @@ nav li {
     transition-duration: .5s;
 }
 
+nav a:last-child li {
+    margin-right: 1em;
+}
+
 nav li:hover {
     color: hotpink;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 nav a {
@@ -83,6 +87,9 @@ nav span {
     background: linear-gradient(to right, #30CFD0 0%, indigo 100%);
     color: transparent;
     background-clip: text;
+    /*for Chrome and Edge:*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero .container li {
@@ -102,19 +109,22 @@ nav span {
 }
 
 .hero .container li:nth-child(4) {
+    margin-top: .4em;
     animation: 11s slide-right;
     color: hotpink;
-    line-height: 1.2em;
+    line-height: 1.3em;
     font-size: 1.8em;
     font-weight: 800;
+    letter-spacing: .05em;
 }
 
 .hero .container li:last-child {
     animation: 11s slide-right;
     color: hotpink;
-    line-height: 1.2em;
+    line-height: 1.3em;
     font-size: 1.8em;
     font-weight: 800;
+    letter-spacing: .05em;
 }
 
 @keyframes slide-right {
@@ -127,8 +137,7 @@ nav span {
 }
 
 .hero img {
-    width: 80%;
-    height: 90%;
+    width: 550px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px 1px rgb(61, 60, 60);
 }
@@ -140,13 +149,13 @@ nav span {
     background: linear-gradient(to right, #30CFD0 0%, indigo 100%);
     color: white;
     border: none;
-    letter-spacing: .2em;
+    letter-spacing: .3em;
     font-weight: 800;
     font-family: 'Raleway', sans-serif;
     text-align: center;
     position: absolute;
     left: 30%;
-    top: 52%;
+    top: 53%;
     text-transform: uppercase;
     transform: translate(-50%, -50%);
     cursor: pointer;
