@@ -6,21 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
-    <script src="script.js"></script>
-    <title>In-Di-Go</title>
+    <title>In-Di-Go Kapcsolat</title>
 </head>
 
 <body>
     <main>
         <nav>
             <div class="logo">
-                <a href="#">
+                <a href="index2.html">
                     <img src="https://images.unsplash.com/photo-1618172193622-ae2d025f4032?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=659&q=80" alt="in-di-go logo">
                     <span>In-Di-Go</span>
                 </a>
             </div>
             <ul>
-                <a href="#">
+                <a href="index2.html">
                     <li>Főoldal</li>
                 </a>
                 <a href="about2.html">
@@ -40,19 +39,24 @@
                 </a>
             </ul>
         </nav>
-        <div class="hero">
-            <div class="hero container">
-                <h1>Testmasszázs és személyi edzés</h1>
-                <li>Túl sokat ülsz a gép előtt? </li>
-                <li>Egészségi problémákkal küzdesz?</li>
-                <li>Segít a személyi edző és gyógymasszőr nőknek</li>
-                <li>Kecskeméten és környékén.</li>
+        <div class="contact">
+            <div class="contact-title">
+                <h1>Kapcsolat</h1>
             </div>
-            <img src="https://images.unsplash.com/photo-1598901865264-4f5f30954532?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=773&q=80" alt="in-di-go massage">
-            <a href="contact2.html"><button class="btn contactBtn">kapcsolat</button></a>
-            <a href="services2.html"><button class="btn moreBtn">tudj meg többet</button></a>
+            <div class="contact-form-container">
+                <span>A részletekért, időpontért, kérlek, keress az alábbi űrlap kitöltésével.</span>
+                <form class="contact-form" action="">
+                    <label for="name">Név</label><br>
+                    <input type="text" name="user_name" required><br>
+                    <label for="email">E-mail-cím</label><br>
+                    <input type="email" name="user_email" required><br>
+                    <label for="message">Üzenet</label><br>
+                    <textarea name="message" cols="30" rows="5"></textarea><br>
+                    <input type="submit" class="btn" value="küldés">
+                </form>
+            </div>
         </div>
-        <footer>
+        <footer class="services">
             <a href="index2.html">
                 <span>In-Di-Go</span></a>
             <a id="v1" href="index.html">
@@ -60,8 +64,7 @@
             <p>Copyright &copy;
                 <script>
                     document.write(new Date().getFullYear())
-                </script> Mócza Erika. All Rights Reserved.
-                <a id="v3" href="">Version 3 >></a> </p>
+                </script> Mócza Erika. All Rights Reserved. <a id="v3" href="">Version 3 >></a> </p>
         </footer>
     </main>
 </body>

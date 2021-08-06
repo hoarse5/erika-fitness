@@ -65,7 +65,7 @@ nav span {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: .5em 3.4em 3.5em 3.5em;
+    margin: .5em 2.8em 3em 3em;
     padding-bottom: 3em;
 }
 
@@ -153,10 +153,8 @@ nav span {
     font-family: 'Raleway', sans-serif;
     text-align: center;
     position: absolute;
-    left: 30%;
-    top: 53%;
+    top: 73%;
     text-transform: uppercase;
-    transform: translate(-50%, -50%);
     cursor: pointer;
     border-radius: 5px;
 }
@@ -169,7 +167,13 @@ nav span {
     background: linear-gradient(to right, indigo 0%, #30CFD0 100%);
 }
 
-.contact {}
+.contactBtn {
+    left: 35%;
+}
+
+.moreBtn {
+    left: 13%;
+}
 
 footer {
     display: flex;
@@ -203,4 +207,72 @@ footer span {
 #v1 {
     font-weight: 600;
     padding-right: .7em;
+}
+
+
+/*Contact*/
+
+.contact {
+    margin: 0 4em;
+}
+
+.contact-title {
+    letter-spacing: .1em;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-form-container span {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.contact-form {
+    padding: 1em;
+    width: 60%;
+}
+
+.contact-form label {
+    font-size: 1.5em;
+}
+
+.contact-form input {
+    width: 80%;
+    font-size: 1.2em;
+    margin-bottom: .6em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    border: none;
+    border-bottom: 1px solid indigo;
+    outline: none;
+    color: #30CFD0;
+}
+
+.contact-form input:focus {
+    outline: none;
+}
+
+.contact-form textarea {
+    width: 80%;
+    margin-bottom: 3em;
+    border-radius: 5px;
+    color: #30CFD0;
+    font-size: 1.2em;
+}
+
+.contact-form textarea:focus {
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: white;
+    left: 40%;
 }
