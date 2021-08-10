@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In-Di-Go Árak</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style2.css">
 </head>
 
@@ -39,61 +40,80 @@
                 </a>
             </ul>
         </nav>
-        <h1>Árak</h1>
-        <section class="massage">
-            <h2>Masszázs árak</h2>
-            <div class="card-container massage">
-                <div class="massage-cards">
-                    <div class="first card">
-                        <p class="first-line">Hát-, vállöv-, derékmasszázs</p>
-                        <span>40 perc</span>
-                        <span>3500 Ft</span>
-                    </div>
-                    <div class="second card">
-                        <p>Teljes testmasszázs</p>
-                        <span>60 perc</span>
-                        <span>5000 Ft</span>
-                        <span>hát-, kar-, lábmasszázs</span>
-                    </div>
-                    <div class="third card">
-                        <p>Teljes testmasszázs</p>
-                        <span>90 perc</span>
-                        <span>6500 Ft</span>
-                        <span>hát-, kar-, láb, arcmasszázs</span>
-                    </div>
-                    <div class="fourth card">
-                        <p>Nyirokmasszázs</p>
-                        <span>60 perc</span>
-                        <span>5000 Ft</span>
-                    </div>
-                    <div class="fifth card">
-                        <p>Nyirokmasszázs</p>
-                        <span>90 perc</span>
-                        <span>6500 Ft</span>
-                    </div>
-                </div>
+        <div class="prices">
+            <div class="btn-box">
+                <button data-tab-target="#massage" class="tab active">Masszázs</button>
+                <button data-tab-target="#nymassage" class="tab">Nyirokmasszázs</button>
+                <button data-tab-target="#ptraining" class="tab">Személyi edzés</button>
             </div>
-        </section>
-        <section class="training">
-            <h2>Személyi edzés árak</h2>
-            <div class="card-container training">
-                <div class="training-cards">
-                    <div class="first card">
-                        <span>1 alkalom</span>
-                        <span>3500 Ft</span>
-                    </div>
-                    <div class="second card">
-                        <span>10 alkalom</span>
-                        <span>31 000 Ft</span>
-                    </div>
-                    <div class="third card">
-                        <span>20 alkalom</span>
-                        <span>60 000 Ft</span>
-                        <span>+ ajándék 40 perc hátmasszázs</span>
-                    </div>
+            <section class="tab-content">
+                <div data-tab-content class="active" id="massage">
+                    <table>
+                        <tr>
+                            <th>Típus</th>
+                            <th>Perc</th>
+                            <th>Ár</th>
+                        </tr>
+                        <tr>
+                            <td>Hát-vállöv-derék masszázs</td>
+                            <td>40</td>
+                            <td>3500 HUF</td>
+                        </tr>
+                        <tr>
+                            <td>Teljes testmasszázs*</td>
+                            <td>60</td>
+                            <td>5000 HUF</td>
+                        </tr>
+                        <tr>
+                            <td>Teljes testmasszázs**</td>
+                            <td>90</td>
+                            <td>6500 HUF</td>
+                        </tr>
+                    </table>
+                    <p>*hátmasszázs + karok, lábak</p>
+                    <p>**hátmasszázs + karok, lábak + arc</p>
                 </div>
-            </div>
-        </section>
+                <div id="nymassage" data-tab-content>
+                    <table>
+                        <tr>
+                            <th>Típus</th>
+                            <th>Perc</th>
+                            <th>Ár</th>
+                        </tr>
+                        <tr>
+                            <td>Nyirokmasszázs</td>
+                            <td>60</td>
+                            <td>5000 HUF</td>
+                        </tr>
+                        <tr>
+                            <td>Nyirokmasszázs</td>
+                            <td>90</td>
+                            <td>6500 HUF</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="ptraining" data-tab-content>
+                    <table>
+                        <tr>
+                            <th>Alkalom</th>
+                            <th>Ár</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>3500 HUF</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>31 000 HUF</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>60 000 HUF + ajándék 40 perces hátmasszázs</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
         <footer class="services">
             <a href="index2.html">
                 <span>In-Di-Go</span></a>

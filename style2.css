@@ -273,3 +273,67 @@ input[type="submit"] {
     color: white;
     left: 40%;
 }
+
+
+/*Prices*/
+
+.prices {
+    margin: 5em;
+}
+
+.btn-box {
+    width: 50%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 3em;
+}
+
+.btn-box button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: indigo;
+}
+
+.btn-box button:hover {
+    color: #30CFD0;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.tab.active {
+    border-bottom: 2px solid indigo;
+}
+
+[data-tab-content].active p {
+    line-height: .5em;
+    font-size: .8em;
+}
+
+[data-tab-content].active p:nth-child(2) {
+    margin-top: 3em;
+}
+
+.tab-content table {
+    width: 550px;
+}
+
+.tab-content table td,
+th {
+    text-align: center;
+    line-height: 2em;
+}
+
+#ptraining {
+    margin-left: 5em;
+}
